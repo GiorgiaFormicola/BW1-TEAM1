@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  color: #ffffff;
+  padding-inline: 6rem;
+  padding-bottom: 6rem;
+  padding-top: 2.5rem;
+}
+
+.titles {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+
+.descriptions {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.accent-color {
+  color: #00ffff;
+}
+
+.answer-button-color {
+  color: #d20094 - #900080;
+}
+
+/* HEADER  */
+
+header {
+  padding-bottom: 6rem;
+}
+
+header img {
+  width: 10rem;
+}
+
+/* MAIN */
+
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  line-height: 3.5rem;
+}
+
+h1 span {
+  font-weight: 700;
+}
+
+section {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  padding-block: 2.8rem;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+  color: #d20094;
+  padding-bottom: 0.8rem;
+}
+
+p {
+  line-height: 1.2rem;
+  color: #b3b4c2;
+}
+
+ul {
+  padding-block: 2.5rem;
+  padding-left: 1.5rem;
+  line-height: 1.5rem;
+  list-style-type: disc;
+  color: #b3b4c2;
+}
+
+ul span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* FOOTER */
+
+footer {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14.5px;
+  padding-bottom: 3rem;
+}
+
+/* #checkbox {
+  appearance: inherit;
+  border: 2px solid white;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+}
+
+#checkbox :checked {
+  content: "x";
+} */
+
+form div {
+  display: inline-block;
+}
+
+label {
+  padding-left: 0.5rem;
+}
+
+a {
+  padding-block: 1rem;
+  padding-inline: 4rem;
+  font-size: 22px;
+  font-weight: 800;
+  background-color: #00ffff;
+  border: #00ffff;
+  box-shadow: 0px 0px 30px 0px #00ffff;
+  margin-left: 23%;
+  color: #0b113b;
+  text-decoration: none;
+}
