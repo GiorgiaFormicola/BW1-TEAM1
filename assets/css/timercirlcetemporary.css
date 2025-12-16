@@ -3,11 +3,7 @@
   width: 100px;
   height: 100px;
   transform: scale(1.5); /* ingrandisce tutto 1.5 volte */
-  transform-origin: center center;
-}
-
-.progress-ring {
-  /* nessuna rotazione: parte da destra verso il basso in senso orario */
+  transform-origin: center;
 }
 
 .progress-ring__circle-bg,
@@ -18,7 +14,7 @@
 }
 
 .progress-ring__circle-bg {
-  stroke: aqua;
+  stroke: #00ffff;
 }
 
 .progress-ring__circle {
@@ -33,5 +29,5 @@
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: bold;
-  color: rgb(0, 255, 255);
+  color: #00ffff;
 }

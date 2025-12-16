@@ -121,7 +121,7 @@ circle.style.strokeDasharray = `${circumference} ${circumference}`;
 // Inizio: cerchio completamente pieno
 circle.style.strokeDashoffset = circumference;
 
-const totalTime = 10; // secondi
+const totalTime = 20; // secondi
 let startTime = null;
 
 function updateTimer(time) {
