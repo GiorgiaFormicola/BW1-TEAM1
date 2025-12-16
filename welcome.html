@@ -3,47 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BUILD WEEK 1 - Benchmark - Welcome page</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/welcome.css" />
   </head>
   <body>
-    <head>
-      <img src="./assets/img/epicode_logo.png" alt="logo" />
-    </head>
+    <header>
+      <img src="./assets/img/epicode_logo.png" alt="Epicode Logo" />
+    </header>
 
-    <section>
-      <div>
-        <p><h1>Welcome to<h1></p>
-        <span><h2>your Exam</h2></span>
-      </div>
-    </section>
-    <div>
-        <h3>Instruction</h3>
-        <p>
-            we don't expect most engineers to know the ansewers to all of these questions, 
-            so don't worry if you're unsure of a few of them.
-        </p>
-    </div>
-    <section>
+    <main>
+      <h1>Welcome to <br /><span>your exam</span></h1>
+
+      <section>
+        <h3>Instructions</h3>
+        <p>We don't expect most engineers to know the answers to all of these <br />questions, so don't worry if you're unsure of a few of them.</p>
+        <ul>
+          <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
+          <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.</li>
+          <li>This exam will take approx. <span>0-5 minutes</span>.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <form>
         <div>
-            <ul>
-                <li>each question is timed and can only be ansewerd once.</li>
-                <li>changing browser tab or opening other windows will invalidate the question.</li>
-                <li>This exam will take approx.0-5 minutes</li>
-            </ul>
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox">I promise to answer myself without help from anyone</label>
         </div>
-    </section>
-    <section>
-        <div>
-            <label>
-                <input type="checkbox">
-                I promise to answer myself without help from anyone
-            </label>
-            <form >
-                    <div>
-                    <button> PROCEED</button>
-                    </div>
-            </form>
-    </section>
-    
+
+        <a href="./benchmark.html">PROCEED</a>
+      </form>
+    </footer>
   </body>
 </html>
