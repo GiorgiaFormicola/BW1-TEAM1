@@ -11,8 +11,7 @@ const questions = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+    question: "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -111,7 +110,62 @@ let contatoreRisposteGiuste = 0;
 let contatoreRisposteSbagliate = 0;
 arrayOttimizzato = shuffle();
 
+const visual = document.querySelector(".timer-number");
+const circle = document.querySelector(".progress-ring__circle");
+
+const radius = circle.r.baseVal.value;
+const circumference = 2 * Math.PI * radius;
+
+// Imposta strokeDasharray
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+// Inizio: cerchio completamente pieno
+circle.style.strokeDashoffset = circumference;
+
+const totalTime = 20; // secondi
+let startTime = null;
+let timerId = null;
+let remainingTime = totalTime;
+
+function startClock() {
+  clearInterval(timerId);
+  remainingTime = totalTime;
+
+  visual.textContent = remainingTime;
+
+  timerId = setInterval(() => {
+    remainingTime--;
+    visual.textContent = remainingTime;
+
+    const percent = remainingTime / totalTime;
+    circle.style.strokeDashoffset = circumference * percent;
+
+    if (remainingTime <= 0) {
+      clearInterval(timerId);
+
+      // TIMEOUT = WRONG ANSWER
+      contatoreRisposteSbagliate++;
+      contatoreDomande++;
+      j++;
+
+      // CLEAR previous question
+      const questionList = document.querySelector(".question");
+      const answersList = document.querySelector(".answers");
+      questionList.innerHTML = "";
+      while (answersList.firstChild) {
+        answersList.removeChild(answersList.firstChild);
+      }
+
+      attribuisciOggetto(arrayOttimizzato, j);
+    }
+  }, 1000);
+}
+
 const attribuisciOggetto = (array, indice) => {
+  if (j >= array.length) {
+    // Quiz finished — redirect
+    window.location.href = "../results.html";
+    return;
+  }
   const domanderisposte = [...array[j][0].incorrect_answers, array[j][0].correct_answer];
   console.log(domanderisposte);
   const questionList = document.querySelector(".question");
@@ -122,6 +176,8 @@ const attribuisciOggetto = (array, indice) => {
     answersList.appendChild(btn);
     btn.textContent = domanderisposte[i];
     btn.addEventListener("click", function () {
+      clearInterval(timerId);
+
       if (btn.textContent === array[j][0].correct_answer) {
         contatoreRisposteGiuste++;
       } else {
@@ -141,6 +197,7 @@ const attribuisciOggetto = (array, indice) => {
   }
 
   questionList.innerHTML = array[j][0].question;
+  startClock();
 
   console.log(contatoreRisposteGiuste);
   console.log(contatoreRisposteSbagliate);
