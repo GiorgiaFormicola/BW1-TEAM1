@@ -123,30 +123,49 @@ circle.style.strokeDashoffset = circumference;
 
 const totalTime = 20; // secondi
 let startTime = null;
+let timerId = null;
+let remainingTime = totalTime;
 
-function updateTimer(time) {
-  if (!startTime) startTime = time;
-  const elapsed = (time - startTime) / 1000;
-  const remaining = Math.max(totalTime - elapsed, 0);
+function startClock() {
+  clearInterval(timerId);
+  remainingTime = totalTime;
 
-  // Aggiorna numero
-  visual.innerHTML = Math.ceil(remaining);
+  visual.textContent = remainingTime;
 
-  // Percentuale rimanente
-  const percent = remaining / totalTime;
-  // Inverti lo svuotamento: partendo da 0 offset completo fino a 100%
-  circle.style.strokeDashoffset = circumference * percent;
+  timerId = setInterval(() => {
+    remainingTime--;
+    visual.textContent = remainingTime;
 
-  if (remaining > 0) {
-    requestAnimationFrame(updateTimer);
-  } else {
-    console.log("Tempo scaduto");
-  }
+    const percent = remainingTime / totalTime;
+    circle.style.strokeDashoffset = circumference * percent;
+
+    if (remainingTime <= 0) {
+      clearInterval(timerId);
+
+      // TIMEOUT = WRONG ANSWER
+      contatoreRisposteSbagliate++;
+      contatoreDomande++;
+      j++;
+
+      // CLEAR previous question
+      const questionList = document.querySelector(".question");
+      const answersList = document.querySelector(".answers");
+      questionList.innerHTML = "";
+      while (answersList.firstChild) {
+        answersList.removeChild(answersList.firstChild);
+      }
+
+      attribuisciOggetto(arrayOttimizzato, j);
+    }
+  }, 1000);
 }
 
-requestAnimationFrame(updateTimer);
-
 const attribuisciOggetto = (array, indice) => {
+  if (j >= array.length) {
+    // Quiz finished — redirect
+    window.location.href = "../results.html";
+    return;
+  }
   const domanderisposte = [...array[j][0].incorrect_answers, array[j][0].correct_answer];
   console.log(domanderisposte);
   const questionList = document.querySelector(".question");
@@ -157,6 +176,8 @@ const attribuisciOggetto = (array, indice) => {
     answersList.appendChild(btn);
     btn.textContent = domanderisposte[i];
     btn.addEventListener("click", function () {
+      clearInterval(timerId);
+
       if (btn.textContent === array[j][0].correct_answer) {
         contatoreRisposteGiuste++;
       } else {
@@ -176,6 +197,7 @@ const attribuisciOggetto = (array, indice) => {
   }
 
   questionList.innerHTML = array[j][0].question;
+  startClock();
 
   console.log(contatoreRisposteGiuste);
   console.log(contatoreRisposteSbagliate);
