@@ -135,8 +135,10 @@ form div {
   position: relative;
 }
 
-input {
-  display: none;
+#checkbox {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
 }
 
 input:checked + span:before {
