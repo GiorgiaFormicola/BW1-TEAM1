@@ -49,26 +49,22 @@ const calcoloPercentuale = (risposteGiuste, risposteSbagliate, risposteTotali) =
 
     const correct = percentualeGiusta;
     const wrong = 100 - percentualeSbagliata;
-
-    
   }
-
 };
 
 function mostraRisultati(risposteGiuste, risposteTotali) {
+  const percentuale = (risposteGiuste / risposteTotali) * 100;
+  const gradi = (risposteGiuste / risposteTotali) * 360;
 
-      const percentuale = (risposteGiuste / risposteTotali) * 100;
-      const gradi = (risposteGiuste / risposteTotali) * 360;
+  const chart = document.getElementById("pie-chart");
 
-      const chart = document.getElementById("pie-chart");
-
-      chart.style.background = `conic-gradient(
-    #00ffff 0deg ${gradi}deg, 
-    #d20094 ${gradi}deg 360deg
+  chart.style.background = `conic-gradient(
+    #d20094 0deg ${360 - gradi}deg, 
+    #00ffff ${360 - gradi}deg 360deg
   )`;
-    }
+}
 
 window.onload = function () {
   calcoloPercentuale(risposteCorrette, risposteErrate, contatoreDomande);
-    mostraRisultati(risposteCorrette,contatoreDomande);
+  mostraRisultati(risposteCorrette, contatoreDomande);
 };
