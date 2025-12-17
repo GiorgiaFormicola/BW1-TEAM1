@@ -109,6 +109,7 @@ j = 0;
 let contatoreDomande = 1;
 let contatoreRisposteGiuste = 0;
 let contatoreRisposteSbagliate = 0;
+
 arrayOttimizzato = shuffle();
 
 const visual = document.querySelector(".timer-number");
@@ -161,9 +162,13 @@ function startClock() {
   }, 1000);
 } */
 
-const attribuisciOggetto = (array, indice) => {
+const attribuisciOggetto = (array, ) => {
   if (j >= array.length) {
+    console.log(array.length)
     // Quiz finished — redirect
+    localStorage.setItem("contatoreRisposteGiuste", contatoreRisposteGiuste);
+    localStorage.setItem("contatoreRisposteSbagliate", contatoreRisposteSbagliate);
+    localStorage.setItem("totaleDomande",j);
     window.location.href = "../results.html";
     return;
   }
