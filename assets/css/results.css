@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  color: #ffffff;
+  padding-inline: 6rem;
+}
+
+.titles {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+
+.descriptions {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.accent-color {
+  color: #00ffff;
+}
+
+.answer-button-color {
+  color: #d20094 - #900080;
+}
+
+/* HEADER  */
+
+header {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+header img {
+  width: 10rem;
+}
+
+/* MAIN */
+
+main {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 25px;
+  color: #d8d9db;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.score {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.questions {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 3rem;
+}
+
+#correct-score {
+  /* display: inline-block; */
+  text-align: left;
+}
+
+#wrong-score {
+  /* display: inline-block; */
+  text-align: right;
+  color: #ffffff97;
+}
+
+#pie-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 20rem;
+  width: 20rem;
+  border: 45px solid #ffffff43;
+  border-radius: 50%;
+  padding: 2rem;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 17px;
+}
+
+#pie-chart p {
+  font-weight: 300;
+  font-size: 13px;
+  color: #d8d9db;
+}
+
+/* FOOTER */
+
+footer {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding-bottom: 6.5rem;
+  text-align: center;
+}
+
+button {
+  padding-block: 1rem;
+  padding-inline: 3.5rem;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid white;
+  box-shadow: 0px 0px 30px 2px #272166, inset 0px 0px 2px 0px white;
+  color: white;
+}

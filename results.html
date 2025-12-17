@@ -3,53 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BUILD WEEK 1 - Benchmark - Results page</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/results.css" />
   </head>
-  <header>
-    <div>
-      <img src="./assets/img/epicode_logo.png" alt="" />
-    </div>
-  </header>
+
   <body>
+    <header>
+      <img src="./assets/img/epicode_logo.png" alt="Epicode Logo" />
+    </header>
+
     <main>
-      <div>
-        <h1>
-          results <br />
-          <p>The summary of your answers:</p>
-        </h1>
-      </div>
-      <div>
-        correct
-        <p><!--punteggio--></p>
-        <p class="corretto"><!--4/6 questions--></p>
-      </div>
-      <div>
-        <h2>
-          <p class="messaggio">
-            <!-- congratulations!-->
-            <!--You passed the exam-->
-          </p>
-          <p class="descMessaggio">
-            <!-- congratulations!-->
-            <!--You passed the exam-->
-          </p>
-        </h2>
-        <p>
-          <!-- we'll send you the certificate
-             in few minutes ecc....-->
-        </p>
-      </div>
-      <div>
-        wrong
-        <p><!--punteggio--></p>
-        <p class="errato"><!--2/6 questions--></p>
-      </div>
-      <footer>
-        <form>
-          <button>RATE US</button>
-        </form>
-      </footer>
+      <h1>Results</h1>
+      <h2>The summary of your answers:</h2>
+
+      <section id="results">
+        <div id="correct-score">
+          <h3>Correct</h3>
+          <p class="score">66.7%</p>
+          <p class="questions">4/6 questions</p>
+        </div>
+
+        <div id="pie-chart">
+          <div>
+            <h4>Congratulations!</h4>
+            <h4 class="accent-color">You passed the exam.</h4>
+          </div>
+          <div>
+            <p>We'll send you the certificate in few minutes.</p>
+            <p>Check your email (including promotions / spam folder)</p>
+          </div>
+        </div>
+
+        <div id="wrong-score">
+          <h3>Wrong</h3>
+          <p class="score">33.3%</p>
+          <p class="questions">2/6 questions</p>
+        </div>
+      </section>
     </main>
+    <footer>
+      <a href="./feedback.html">
+        <button>RATE US</button>
+      </a>
+    </footer>
     <script src="./assets/script/results.js"></script>
   </body>
 </html>
