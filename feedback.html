@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUILD WEEK 1 - Benchmark - Feedback page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -11,53 +12,44 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/temporaryfeedback.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/feedback.css" />
   </head>
+
   <body>
     <header>
-      <div>
-        <img src="epicode_logo.png" alt="" />
-      </div>
+      <img src="./assets/img/epicode_logo.png" alt="Epicode Logo" />
     </header>
 
     <main>
-      <section>
-        <h1>
-          <p>Tell us how it's going</p>
-        </h1>
-        <h2>
-          <p>From 0 to 10, how likely are you to raccomend EPICODE to a freind or a colleague?</p>
-        </h2>
-      </section>
-      <div class="rating-star">
-        <section class="stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </section>
-      </div>
-      <section>
-        <h3>
-          <p>Leave us an open feedback about your experience so far</p>
-        </h3>
-        <div>
-          <input type="" placeholder="Write your comment here" />
-        </div>
-      </section>
-    </main>
-    <footer>
+      <h1>Tell us how it's going</h1>
+      <h3>From 0 to 10, how likely are you to recommend EPICODE to a friend or a colleague?</h3>
+
       <form>
-        <div>
-          <button>MORE INFO</button>
+        <div class="rating-star">
+          <section class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </section>
+        </div>
+
+        <h3>Leave us an open feedback about your experience so far</h3>
+        <div class="comment">
+          <input type="text" placeholder="Write your comment here" />
         </div>
       </form>
+    </main>
+
+    <footer>
+      <a href="https://epicode.com/it/" target="_blank">MORE INFO</a>
     </footer>
 
     <script src="./assets/script/feedback.js"></script>
