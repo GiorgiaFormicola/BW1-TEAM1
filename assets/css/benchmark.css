@@ -11,6 +11,7 @@ body {
   background-size: cover;
   color: #ffffff;
   padding-inline: 6rem;
+  height: 100vh;
 }
 
 .titles {
@@ -45,7 +46,7 @@ main {
 
 header {
   padding-top: 2.5rem;
-  padding-bottom: 9rem;
+  margin-bottom: 5rem;
 }
 
 header img {
@@ -78,15 +79,63 @@ header p {
   font-size: 40px;
 }
 
+/* TIMER */
+
+.timer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform: scale(1.5); /* ingrandisce tutto 1.5 volte */
+  transform-origin: center;
+}
+
+.progress-ring__circle-bg,
+.progress-ring__circle {
+  fill: transparent;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.progress-ring__circle-bg {
+  stroke: #00ffff;
+}
+
+.progress-ring__circle {
+  stroke: white;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.timer-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffff;
+}
+
 /* MAIN */
+
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10rem;
+  width: 100%;
+  right: 0;
+  height: 224px;
+}
 
 h1 {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 50px;
+  font-size: 3em;
   line-height: 3.5rem;
+  padding-inline: 6rem;
 }
 
 h1 span {
@@ -94,30 +143,47 @@ h1 span {
 }
 
 section {
+  /* margin-bottom: 8rem; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+  height: 13rem;
+  position: fixed;
+  top: 25rem;
+  width: 100%;
+  right: 0;
+  padding-inline: 6rem;
+}
+
+section button {
+  /* display: inline-block; */
+  background-color: #ffffff1f;
+  width: 22rem;
+  padding-block: 1.6rem;
+  border-radius: 2rem;
+  box-shadow: inset 1.5px 1.5px 2px 2px white;
+  border: none;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
-  padding-block: 4rem;
+  color: white;
 }
 
-section div {
-  display: inline-block;
-  background-color: #ffffff1f;
-  width: 21rem;
-  padding-block: 1.6rem;
-  border-radius: 2rem;
-  box-shadow: inset 1.5px 1.5px 2px 2px white;
-}
-
-section div:nth-of-type(odd) {
+/* section button:nth-of-type(odd) {
   margin-right: 2rem;
 }
 
-section div:nth-of-type(1),
-section div:nth-of-type(2) {
+section button:nth-of-type(1),
+section button:nth-of-type(2) {
   margin-bottom: 1.5rem;
+} */
+
+.answer-button-color:hover {
+  background: linear-gradient(180deg, #ca0191 0%, #8a007a 80%);
 }
 
 /* FOOTER */
@@ -128,11 +194,16 @@ footer {
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
-  padding-top: 4rem;
+  /* padding-bottom: 4rem; */
   text-align: center;
   letter-spacing: 0.2rem;
+  position: fixed;
+  top: 43rem;
+  width: 100%;
+  right: 0;
 }
-.conteggioDomande, .totaleDomande {
+.conteggioDomande,
+.totaleDomande {
   display: inline-block;
 }
 .totaleDomande {

@@ -114,7 +114,7 @@ arrayOttimizzato = shuffle();
 const visual = document.querySelector(".timer-number");
 const circle = document.querySelector(".progress-ring__circle");
 
-const radius = circle.r.baseVal.value;
+/* const radius = circle.r.baseVal.value;
 const circumference = 2 * Math.PI * radius;
 
 // Imposta strokeDasharray
@@ -159,7 +159,7 @@ function startClock() {
       attribuisciOggetto(arrayOttimizzato, j);
     }
   }, 1000);
-}
+} */
 
 const attribuisciOggetto = (array, indice) => {
   if (j >= array.length) {
@@ -203,7 +203,8 @@ const attribuisciOggetto = (array, indice) => {
   }
 
   questionList.innerHTML = array[j][0].question;
-  startClock();
+
+  /*   startClock(); */
 
   console.log(contatoreRisposteGiuste);
   console.log(contatoreRisposteSbagliate);
