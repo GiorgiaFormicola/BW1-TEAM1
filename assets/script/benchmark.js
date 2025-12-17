@@ -187,7 +187,7 @@ const attribuisciOggetto = (array, ) => {
     answersList.appendChild(btn);
     btn.textContent = domanderisposte[i];
     btn.addEventListener("click", function () {
-      clearInterval(timerId);
+    /*clearInterval(timerId);*/
 
       if (btn.textContent === array[j][0].correct_answer) {
         contatoreRisposteGiuste++;
