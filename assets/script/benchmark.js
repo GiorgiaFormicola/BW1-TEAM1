@@ -148,6 +148,7 @@ function startTimer() {
       // Passa alla prossima domanda
       j++;
       contatoreDomande++;
+      contatoreRisposteSbagliate++;
 
       if (j < arrayOttimizzato.length) {
         attribuisciOggetto(arrayOttimizzato, j);
