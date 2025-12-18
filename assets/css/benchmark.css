@@ -111,7 +111,7 @@ svg.progress-ring {
 
 .progress-ring__circle {
   stroke: #00ffff;
-  transition: stroke-dashoffset 1s linear; /* cerchio che scorre */
+  transition: stroke-dashoffset  1s linear ; /* cerchio che scorre */
 }
 
 .timer-text {
