@@ -118,7 +118,7 @@ function updateUI() {
   circle.style.strokeDashoffset = offset;
 }
 
-const totalTime = 10;
+const totalTime = 20;
 let remaining = totalTime;
 
 const circle = document.querySelector(".progress-ring__circle");

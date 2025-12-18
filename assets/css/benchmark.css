@@ -10,7 +10,8 @@ body {
   background-image: url(../img/bg.jpg);
   background-size: cover;
   color: #ffffff;
-  padding-inline: 6rem;
+  /* padding-inline: 6rem; */
+  padding-inline: 8rem;
   height: 100vh;
 }
 
@@ -39,14 +40,18 @@ body {
 }
 
 main {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 68%;
 }
 
 /* HEADER  */
 
 header {
-  padding-top: 2.5rem;
-  margin-bottom: 5rem;
+  padding-top: 3rem;
+  /* margin-bottom: 5rem; */
   display: inline-block;
 }
 
@@ -72,9 +77,8 @@ header p {
   margin-block: 0.1rem;
 }
 
-.logo {
+header img {
   width: 11rem;
-  height: 5rem;
 }
 
 #seconds {
@@ -86,11 +90,14 @@ header p {
 .timer {
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: 8rem;
   width: 150px;
   height: 150px;
   display: grid;
   place-items: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.4);
 }
 
 svg.progress-ring {
@@ -124,30 +131,32 @@ svg.progress-ring {
   justify-content: center;
   text-align: center;
   pointer-events: none;
+  font-family: "Outfit", sans-serif;
+  color: #d8d9db;
 }
 
 .timer-text .label {
   font-size: 0.5rem;
-  opacity: 0.8;
 }
 
 .timer-text .value {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3rem;
 }
 
 /* MAIN */
 
 .h1 {
-  display: flex;
+  margin-top: 8rem;
+  text-align: center;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 10rem;
-  width: 100%;
-  right: 0;
-  height: 224px;
+  position: fixed; */
+  /* top: 10rem;
+  width: 80%;
+  height: 224px; */
 }
 
 h1 {
@@ -155,9 +164,10 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 3em;
+  /* font-size: 3em; */
+  font-size: 60px;
   line-height: 3.5rem;
-  padding-inline: 6rem;
+  /* padding-inline: 3rem; */
 }
 
 h1 span {
@@ -171,27 +181,32 @@ section {
   justify-content: space-evenly;
   align-content: space-evenly;
   align-items: center;
-  height: 13rem;
-  position: fixed;
-  top: 25rem;
-  width: 100%;
-  right: 0;
-  padding-inline: 6rem;
+  height: 17rem;
+  width: 61rem;
+  /* position: fixed;
+  top: 30rem;
+  width: 60%;
+  right: 21rem; */
+  /* padding-inline: 1rem; */
 }
 
 section button {
   /* display: inline-block; */
   background-color: #ffffff1f;
-  width: 22rem;
-  padding-block: 1.6rem;
-  border-radius: 2rem;
+  /* width: 22rem; */
+  width: 25rem;
+  /* padding-block: 1.6rem; */
+  padding-block: 2rem;
+  /* border-radius: 2rem; */
+  border-radius: 3rem;
   box-shadow: inset 1.5px 1.5px 2px 2px white;
   border: none;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 20px;
   color: white;
 }
 
@@ -215,12 +230,13 @@ footer {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 20px;
   /* padding-bottom: 4rem; */
   text-align: center;
   letter-spacing: 0.2rem;
   position: fixed;
-  top: 43rem;
+  top: 51rem;
   width: 100%;
   right: 0;
 }
@@ -243,4 +259,8 @@ footer {
 
 .animate-timer {
   animation: reveal 10s linear;
+}
+
+footer p {
+  display: inline-block;
 }
