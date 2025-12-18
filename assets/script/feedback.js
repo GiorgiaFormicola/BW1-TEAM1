@@ -25,7 +25,7 @@ const feedbackDissapears = () => {
   moreInfo.addEventListener("click", function (event) {
     event.preventDefault();
 
-    const storeFeedback = comment.value.trim(); // ✅ read value NOW
+    const storeFeedback = comment.value.trim(); 
 
     if (selectedReview !== 0 && storeFeedback !== "") {
       main.replaceChildren();

@@ -191,8 +191,8 @@ const attribuisciOggetto = (array) => {
   const countQuestions = document.querySelector(".conteggioDomande");
   const totalQuestions = document.querySelector(".totaleDomande");
   console.log(array.length);
-  countQuestions.innerHTML = contatoreDomande + "&nbsp";
-  totalQuestions.innerHTML = "/ " + array.length;
+  countQuestions.innerHTML = "QUESTION " + contatoreDomande;
+  totalQuestions.innerHTML = " / " + array.length;
   for (let i = 0; i < domanderisposte.length; i++) {
     const btn = document.createElement("button");
     btn.classList.add("answer-button-color");

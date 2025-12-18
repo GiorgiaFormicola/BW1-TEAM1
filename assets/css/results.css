@@ -8,7 +8,8 @@
 
 body {
   background-image: url(../img/bg.jpg);
-  background-size: cover;
+  background-size: 120%;
+  background-position: center;
   color: #ffffff;
   padding-inline: 6rem;
 }

@@ -12,6 +12,7 @@ body {
   color: #ffffff;
   padding-inline: 6rem;
   height: 100vh;
+  min-width: 800px;
 }
 
 .titles {
@@ -86,7 +87,7 @@ header p {
 .timer {
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: 6rem;
   width: 150px;
   height: 150px;
   display: grid;
@@ -129,12 +130,14 @@ svg.progress-ring {
 .timer-text .label {
   font-size: 0.5rem;
   opacity: 0.8;
+  font-family: "Inter";
 }
 
 .timer-text .value {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+
   line-height: 1.2;
+  font-family: "Inter";
 }
 
 /* MAIN */
@@ -144,10 +147,10 @@ svg.progress-ring {
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 10rem;
+  top: 11.3rem;
   width: 100%;
   right: 0;
-  height: 224px;
+  height: 240px;
 }
 
 h1 {
@@ -171,9 +174,9 @@ section {
   justify-content: space-evenly;
   align-content: space-evenly;
   align-items: center;
-  height: 13rem;
+  height: 13.5rem;
   position: fixed;
-  top: 25rem;
+  top: 26.2rem;
   width: 100%;
   right: 0;
   padding-inline: 6rem;
@@ -183,15 +186,15 @@ section button {
   /* display: inline-block; */
   background-color: #ffffff1f;
   width: 22rem;
-  padding-block: 1.6rem;
-  border-radius: 2rem;
+  padding-block: 1.8rem;
+  border-radius: 2.5rem;
   box-shadow: inset 1.5px 1.5px 2px 2px white;
   border: none;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
 }
 
@@ -226,7 +229,9 @@ footer {
 }
 .conteggioDomande,
 .totaleDomande {
+  margin-block-start: 4rem;
   display: inline-block;
+  font-size: 1.3rem;
 }
 .totaleDomande {
   color: #d20094;
