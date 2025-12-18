@@ -12,6 +12,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question: "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+    question: "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -110,9 +111,14 @@ let contatoreRisposteGiuste = 0;
 let contatoreRisposteSbagliate = 0;
 
 arrayOttimizzato = shuffle();
+function updateUI() {
+  const offset = -(circumference * (1 - remaining / totalTime));
+  circle.style.strokeDashoffset = offset;
+  value.textContent = remaining;
+}
 
-const totalTime = 20;
-let remaining = totalTime;
+const totalTime = 10;
+let remaining = 10;
 
 const circle = document.querySelector(".progress-ring__circle");
 const value = document.getElementById("timer-value");
@@ -127,14 +133,17 @@ let timerId;
 
 function startTimer() {
   clearInterval(timerId);
+  circle.classList.remove("animate-timer");
+  setTimeout(() => {
+    circle.classList.add("animate-timer");
+  });
   remaining = totalTime;
   updateUI();
 
   timerId = setInterval(() => {
     remaining--;
-    updateUI();
 
-    if (remaining <= 0) {
+    if (remaining < 1) {
       clearInterval(timerId);
 
       // Pulisci risposte precedenti
@@ -159,13 +168,8 @@ function startTimer() {
         window.location.href = "../results.html";
       }
     }
+    updateUI();
   }, 1000);
-}
-
-function updateUI() {
-  const offset = circumference * (remaining / totalTime);
-  circle.style.strokeDashoffset = offset;
-  value.textContent = remaining;
 }
 
 const attribuisciOggetto = (array) => {

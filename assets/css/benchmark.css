@@ -111,7 +111,6 @@ svg.progress-ring {
 
 .progress-ring__circle {
   stroke: #00ffff;
-  transition: stroke-dashoffset 1s linear; /* cerchio che scorre */
 }
 
 .timer-text {
@@ -231,4 +230,17 @@ footer {
 }
 .totaleDomande {
   color: #d20094;
+}
+
+@keyframes reveal {
+  0% {
+    stroke-dashoffset: 377;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-timer {
+  animation: reveal 10s linear;
 }

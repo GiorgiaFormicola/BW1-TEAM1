@@ -93,8 +93,7 @@ i:has(~ i:hover) {
 }
 
 .stars i.active {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(91%) saturate(2598%) hue-rotate(103deg) brightness(105%)
-    contrast(102%);
+  filter: brightness(0) saturate(100%) invert(89%) sepia(91%) saturate(2598%) hue-rotate(103deg) brightness(105%) contrast(102%);
 }
 
 .comment {
@@ -122,6 +121,15 @@ i:has(~ i:hover) {
   outline: none;
 }
 
+.thankYouBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  color: white;
+  border-radius: 12px;
+}
+
 /* FOOTER */
 
 footer {
@@ -144,4 +152,8 @@ a {
   box-shadow: 0px 0px 30px 0px #00ffff;
   color: #0b113b;
   text-decoration: none;
+}
+
+.alert {
+  margin-bottom: 2rem;
 }
