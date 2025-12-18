@@ -111,14 +111,15 @@ let contatoreRisposteGiuste = 0;
 let contatoreRisposteSbagliate = 0;
 
 arrayOttimizzato = shuffle();
+
 function updateUI() {
+  value.textContent = Math.ceil(remaining); // mostra solo secondi interi
   const offset = -(circumference * (1 - remaining / totalTime));
   circle.style.strokeDashoffset = offset;
-  value.textContent = remaining;
 }
 
 const totalTime = 10;
-let remaining = 10;
+let remaining = totalTime;
 
 const circle = document.querySelector(".progress-ring__circle");
 const value = document.getElementById("timer-value");
@@ -133,20 +134,16 @@ let timerId;
 
 function startTimer() {
   clearInterval(timerId);
-  circle.classList.remove("animate-timer");
-  setTimeout(() => {
-    circle.classList.add("animate-timer");
-  });
   remaining = totalTime;
   updateUI();
 
   timerId = setInterval(() => {
-    remaining--;
-
-    if (remaining < 1) {
+    remaining -= 0.1; // decimi di secondo
+    if (remaining <= 0) {
+      remaining = 0;
       clearInterval(timerId);
 
-      // Pulisci risposte precedenti
+      // Pulisci DOM
       const questionList = document.querySelector(".question");
       const answersList = document.querySelector(".answers");
       while (answersList.firstChild) {
@@ -154,22 +151,23 @@ function startTimer() {
         answersList.removeChild(answersList.firstChild);
       }
 
-      // Passa alla prossima domanda
-      j++;
       contatoreDomande++;
       contatoreRisposteSbagliate++;
+      j++;
 
-      if (j < arrayOttimizzato.length) {
-        attribuisciOggetto(arrayOttimizzato, j);
-      } else {
+      // Controllo ultima domanda
+      if (j >= arrayOttimizzato.length) {
         localStorage.setItem("contatoreRisposteGiuste", contatoreRisposteGiuste);
         localStorage.setItem("contatoreRisposteSbagliate", contatoreRisposteSbagliate);
         localStorage.setItem("totaleDomande", j);
         window.location.href = "../results.html";
+        return;
+      } else {
+        attribuisciOggetto(arrayOttimizzato, j);
       }
     }
     updateUI();
-  }, 1000);
+  }, 100);
 }
 
 const attribuisciOggetto = (array) => {
@@ -197,7 +195,7 @@ const attribuisciOggetto = (array) => {
     answersList.appendChild(btn);
     btn.textContent = domanderisposte[i];
     btn.addEventListener("click", function () {
-      /*clearInterval(timerId);*/
+      clearInterval(timerId);
 
       if (btn.textContent === array[j][0].correct_answer) {
         contatoreRisposteGiuste++;

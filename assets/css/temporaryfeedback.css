@@ -1,9 +1,0 @@
-.stars i {
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-  transition: color 0.2s ease;
-}
-
-.stars i.active {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(91%) saturate(2598%) hue-rotate(103deg) brightness(105%) contrast(102%);
-}
