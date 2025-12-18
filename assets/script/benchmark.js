@@ -134,16 +134,18 @@ let timerId;
 function startTimer() {
   clearInterval(timerId);
   circle.classList.remove("animate-timer");
+  circle.style.display = "None";
   setTimeout(() => {
     circle.classList.add("animate-timer");
-  });
+    circle.style.display = "block";
+  },10);
   remaining = totalTime;
   updateUI();
 
   timerId = setInterval(() => {
     remaining--;
 
-    if (remaining < 1) {
+    if (remaining < 0) {
       clearInterval(timerId);
 
       // Pulisci risposte precedenti

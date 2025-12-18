@@ -133,14 +133,14 @@ section {
 }
 
 #contenitore {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  z-index: 10;
+  position: absolute; /* 1. Lo rende sovrapponibile */
+  top: 50%; /* 2. Spinge il bordo superiore a metà */
+  left: 50%; /* 3. Spinge il bordo sinistro a metà */
+  transform: translate(-50%, -50%); /* 4. Centra perfettamente l'elemento su se stesso */
+  z-index: 10; /* 5. Assicura che stia sopra al grafico (che ha z-index 1) */
   text-align: center;
-  width: 70%; 
-  pointer-events: none; 
+  width: 70%; /* Opzionale: assicura che il testo sia centrato orizzontalmente se va a capo */
+  pointer-events: none; /* Opzionale: permette di cliccare attraverso il testo se serve */
 }
 
 h4 {

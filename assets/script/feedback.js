@@ -16,27 +16,32 @@ stars.forEach((star, index1) => {
 });
 
 const feedbackDissapears = () => {
-  const form = document.querySelector(".feedback-form");
+  const footer = document.querySelector("footer");
   const main = document.querySelector("main");
   const error = document.querySelector(".error");
+  const comment = document.querySelector("#commentText");
+  const moreInfo = document.querySelector("a");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  moreInfo.addEventListener("click", function (event) {
+    event.preventDefault();
 
-    if (selectedReview !== 0) {
+    const storeFeedback = comment.value.trim(); // ✅ read value NOW
+
+    if (selectedReview !== 0 && storeFeedback !== "") {
       main.replaceChildren();
+      footer.replaceChildren();
 
       const box = document.createElement("div");
-      box.textContent = "Thank you for your feedback";
-
+      box.textContent = "Thank you \n for your feedback!";
+      box.classList.add("thankYouBox");
+      window.open("https://epicode.com/it/", "_blank").focus();
       main.appendChild(box);
     } else {
-      while (error.firstChild) {
-        error.removeChild(error.firstChild);
-      }
+      error.replaceChildren();
+
       const divUnderInput = document.createElement("div");
       divUnderInput.classList.add("alert");
-      divUnderInput.textContent = "Devi Selezionare ALMENO una Stella per continuare";
+      divUnderInput.textContent = "Devi selezionare almeno una stella e inserire un commento";
 
       error.appendChild(divUnderInput);
     }
