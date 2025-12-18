@@ -10,7 +10,8 @@ body {
   background-image: url(../img/bg.jpg);
   background-size: cover;
   color: #ffffff;
-  padding-inline: 6rem;
+  /* padding-inline: 6rem; */
+  padding-inline: 8rem;
 }
 
 .titles {
@@ -43,12 +44,15 @@ body {
 /* HEADER  */
 
 header {
-  padding-top: 2.5rem;
-  padding-bottom: 2rem;
+  /* padding-top: 2.5rem; */
+  padding-top: 3rem;
+  /* padding-bottom: 2rem; */
+  padding-bottom: 3rem;
 }
 
 header img {
-  width: 10rem;
+  /* width: 10rem; */
+  width: 11rem;
 }
 
 /* MAIN */
@@ -62,35 +66,43 @@ main {
 
 h1 {
   font-weight: 600;
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 65px;
+  /* padding-bottom: 0; */
+  padding-bottom: 0.5rem;
 }
 
 h2 {
   font-weight: 300;
-  font-size: 25px;
+  /* font-size: 25px; */
+  font-size: 30px;
   color: #d8d9db;
 }
 
 h3 {
   font-weight: 400;
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 65px;
 }
 
 .score {
   font-weight: 600;
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 65px;
 }
 
 .questions {
   font-weight: 300;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 25px;
 }
 
 section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block: 3rem;
+  /* margin-block: 3rem; */
+  margin-block: 4rem;
 }
 
 #correct-score {
@@ -106,8 +118,8 @@ section {
 
 .chart-wrapper {
   position: relative;
-  width: 20rem; /* Stessa larghezza del grafico */
-  height: 20rem; /* Stessa altezza del grafico */
+  width: 23rem; /* Stessa larghezza del grafico */
+  height: 23rem; /* Stessa altezza del grafico */
   margin: 0 auto; /* Per centrare tutto nella pagina se serve */
   display: flex;
   justify-content: center;
@@ -121,7 +133,8 @@ section {
 
   background: conic-gradient(#d20094 0% 0%, #00ffff 0% 100%);
 
-  mask: radial-gradient(circle, transparent 55%, black 56%);
+  mask: radial-gradient(circle, transparent 51%, black 52%);
+  /* mask: radial-gradient(circle, transparent 55%, black 56%); */
 
   display: flex;
   justify-content: center;
@@ -145,13 +158,18 @@ section {
 
 h4 {
   font-weight: 400;
-  font-size: 17px;
+  /* font-size: 17px; */
+  font-size: 20px;
+  /* padding-inline: 1rem; */
 }
 
-#pie-chart p {
+.test {
   font-weight: 300;
-  font-size: 13px;
+  /* font-size: 13px; */
+  font-size: 14px;
   color: #d8d9db;
+  padding-top: 2rem;
+  padding-inline: 1.5rem;
 }
 
 /* FOOTER */
@@ -160,14 +178,16 @@ footer {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  padding-bottom: 6.5rem;
+  /* padding-bottom: 6.5rem; */
   text-align: center;
 }
 
 button {
   padding-block: 1rem;
-  padding-inline: 3.5rem;
-  font-size: 20px;
+  /* padding-inline: 3.5rem; */
+  padding-inline: 4.5rem;
+  /* font-size: 20px; */
+  font-size: 25px;
   font-weight: 700;
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid white;

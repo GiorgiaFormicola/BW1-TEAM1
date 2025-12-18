@@ -29,12 +29,13 @@ const calcoloPercentuale = (risposteGiuste, risposteSbagliate, risposteTotali) =
 
     const contenitore1 = document.createElement("div");
     const primoMessaggio1 = document.createElement("h4");
-    primoMessaggio1.textContent = "We're sorry";
+    primoMessaggio1.textContent = "We're sorry!";
     const secondoMessaggio1 = document.createElement("h4");
     secondoMessaggio1.textContent = "You did not pass the exam.";
     secondoMessaggio1.classList.add("accent-color2");
 
     const contenitore2 = document.createElement("div");
+    contenitore2.classList.add("test");
     const primoMessaggio2 = document.createElement("p");
     primoMessaggio2.textContent = "Unfortunately, you did not achieve the minimum required score.";
     const secondoMessaggio2 = document.createElement("p");
