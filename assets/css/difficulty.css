@@ -222,15 +222,12 @@ section button:nth-of-type(2) {
   background: linear-gradient(180deg, #ca0191 0%, #8a007a 80%);
 }
 
-.easy-button-color:hover,
-.easy-button-color:active {
+.easy-button-color:hover {
   background: linear-gradient(180deg, #00ffff 0%, #039b9b 80%);
 }
 
-.hard-button-color:hover,
-.hard-button-color:active {
+.hard-button-color:hover {
   /* background: linear-gradient(180deg, #ff0000 0%, #880202 80%); */
-  background: linear-gradient(180deg, #ca0191 0%, #8a007a 80%);
 }
 
 /* FOOTER */
